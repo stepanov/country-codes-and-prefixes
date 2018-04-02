@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         bootstrap="tests/bootstrap.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         syntaxCheck="true">
+    <testsuites>
+        <testsuite name="CountryZilla Test Suite">
+            <directory>./tests/</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory>./src</directory>
+        </whitelist>
+    </filter>
+        <logging>
+        <log type="coverage-text" target="php://stdout" showUncoveredFiles="true"/>
+        <log type="coverage-html" target="build/test-coverage"/>
+        <log type="coverage-clover" target="build/test-results/clover.xml"/>
+        <log type="coverage-crap4j" target="build/test-results/crap4j.xml"/>
+        <log type="junit" target="build/test-results/junit.xml" logIncompleteSkipped="false"/>
+    </logging>
+</phpunit>
